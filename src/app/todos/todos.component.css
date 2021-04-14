@@ -1,0 +1,94 @@
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-sm-6{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.card-header{
+    padding: 1rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgb(185 221 246);
+    border-bottom: 1px solid rgb(185 221 246);
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.todo {
+    display: flex;
+    background: #d6f6f0;
+    margin-bottom: 10px;
+    padding: 18px;
+}
+.content {
+    font-size: 18px;
+    font-weight: 500;
+}
+.no {
+    display: none;
+}
+button.btn-danger {
+    background: transparent;
+    border: 0;
+    margin-left: auto;
+    color: #de4545;
+}
+button.btn-danger ion-icon {
+    font-size: 18px;
+}
+.m-auto{
+    margin: 40px auto;
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: 1440px;
+    }
+    }
+@media (min-width: 769px){
+.col-sm-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
+@media (max-width: 768px){
+    .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+

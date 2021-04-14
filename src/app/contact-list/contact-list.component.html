@@ -1,0 +1,64 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 m-auto" >
+            <div class="card">
+                <div class="create-btn">
+                    <!-- <button mat-fab color="accent">
+                        <mat-icon>add</mat-icon>
+                      </button> -->
+                </div>
+            <div class="card-header">
+                <h2>Conatct List</h2>
+                <div class="createbtn">
+                    <button mat-fab color="primary" (click)="openDialog()">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+                
+            </div>    
+            <div class="card-body">
+            
+              <div class="card-text">
+                  <div class="todos">
+                      
+                      <!-- <div class="todo" *ngFor='let todo of todos; let i=index'> -->
+                        <div class="todo" >
+                            <table width="100%">
+                                <tbody>
+                                    <tr *ngFor='let contact of listofContact; let i=index'>
+                                        <td class="sr-no">{{ i+1 }}</td>
+                                        <td class="text-capital">{{contact?.name}}</td>
+                                        <td>{{contact?.ContactNo}}</td>
+                                        <td align="right">
+                                            <div>
+                                                <button mat-icon-button color="primary" class="btn-edit" (click)="openDialog(contact)">
+                                                    <mat-icon>edit</mat-icon>
+                                                  </button>
+                                                  <button mat-icon-button color="warn" class="btn-delete" (click)="onDelete(i)">
+                                                    <mat-icon>delete</mat-icon>
+                                                  </button>
+                                                <!-- <button class="btn btn-edit" (click)="openDialog(contact)">
+                                                    <mat-icon>edit</mat-icon>
+                                                </button> -->
+                                                <!-- <button class="btn btn-delete" >
+                                                    <mat-icon>delete</mat-icon>
+                                                </button> -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="" *ngIf='listofContact?.length==0'>No Contacts</div>
+                      </div>
+                     
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+         
+    </div>
+</div>
